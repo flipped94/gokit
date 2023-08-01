@@ -167,7 +167,7 @@ func TestArrayList_Append(t *testing.T) {
 				return
 			}
 
-			assert.Equal(t, tc.wantSlice, tc.list.AsSlice())
+			assert.Equal(t, tc.wantSlice, tc.list.ToSlice())
 		})
 	}
 }
@@ -471,10 +471,10 @@ func TestArrayList_Range(t *testing.T) {
 	}
 }
 
-func TestArrayList_AsSlice(t *testing.T) {
+func TestArrayList_ToSlice(t *testing.T) {
 	vals := []int{1, 2, 3}
 	a := NewArrayListOf[int](vals)
-	slice := a.AsSlice()
+	slice := a.ToSlice()
 	// 内容相同
 	assert.Equal(t, slice, vals)
 	aAddr := fmt.Sprintf("%p", vals)

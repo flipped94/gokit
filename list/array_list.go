@@ -5,6 +5,10 @@ import (
 	"github.com/flipped94/gokit/internal/slice"
 )
 
+var (
+	_ List[any] = &ArrayList[any]{}
+)
+
 // ArrayList 基于切片的简单封装
 type ArrayList[T any] struct {
 	elements []T
@@ -105,7 +109,7 @@ func (a *ArrayList[T]) Range(fn func(index int, t T) error) error {
 // 不允许返回 nil，在没有元素的情况下，
 // 必须返回一个长度和容量都为 0 的切片
 // ToSlice 每次调用都必须返回一个全新的切片
-func (list *ArrayList[T]) AsSlice() []T {
+func (list *ArrayList[T]) ToSlice() []T {
 	res := make([]T, len(list.elements))
 	copy(res, list.elements)
 	return res
