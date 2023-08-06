@@ -3,7 +3,7 @@ package slice
 import "github.com/flipped94/gokit/set"
 
 // Contains 判断 source 是否包含 e
-func Contains[T comparable](source []T, e T, equal equalFunc[T]) bool {
+func Contains[T any](source []T, e T, equal equalFunc[T]) bool {
 	for _, v := range source {
 		if equal(v, e) {
 			return true
