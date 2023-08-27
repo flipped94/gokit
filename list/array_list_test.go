@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/flipped94/gokit/internal/err"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/flipped94/gokit/internal/err"
 )
 
 func TestArrayList_Add(t *testing.T) {

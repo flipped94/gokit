@@ -3,10 +3,9 @@ package list
 import (
 	"errors"
 	"fmt"
+	"testing"
 
 	"github.com/stretchr/testify/assert"
-
-	"testing"
 )
 
 func TestLinkedList_Add(t *testing.T) {

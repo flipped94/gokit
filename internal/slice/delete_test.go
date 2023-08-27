@@ -3,8 +3,9 @@ package slice
 import (
 	"testing"
 
-	"github.com/flipped94/gokit/internal/err"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/flipped94/gokit/internal/err"
 )
 
 func TestDeleteAt(t *testing.T) {
